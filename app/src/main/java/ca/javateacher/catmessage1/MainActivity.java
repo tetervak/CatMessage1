@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         message = getString(R.string.undefined);
     }
     // open the activity, showing the message
-    Intent intent = new Intent(MainActivity.this, OutputActivity.class);
+    Intent intent = new Intent(this, OutputActivity.class);
     intent.putExtra(OutputActivity.MESSAGE, message);
     startActivity(intent);
   }
