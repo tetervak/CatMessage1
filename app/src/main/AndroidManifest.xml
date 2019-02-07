@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         android:theme="@style/AppTheme">
-        <activity android:name=".OutputActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".OutputActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
