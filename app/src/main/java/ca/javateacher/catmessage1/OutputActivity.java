@@ -3,7 +3,6 @@ package ca.javateacher.catmessage1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -22,11 +21,6 @@ public class OutputActivity extends AppCompatActivity {
     messageView.setText(message);
 
     Button closeButton = findViewById(R.id.close_button);
-    closeButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        finish();
-      }
-    });
+    closeButton.setOnClickListener(v -> finish());
   }
 }
