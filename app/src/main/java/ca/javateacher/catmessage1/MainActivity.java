@@ -5,10 +5,12 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
 
+  private CheckBox mUrgentCheckBox;
   private RadioGroup mMessageGroup;
 
   @Override
@@ -16,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
+    // lookup the views
+    mUrgentCheckBox = findViewById(R.id.urgent_check_box);
     mMessageGroup = findViewById(R.id.message_group);
 
     Button sendButton = findViewById(R.id.send_button);
@@ -23,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void showOutput() {
-    // get the selected message
+    // get urgent flag value
+    boolean urgent = mUrgentCheckBox.isChecked();
+    // get the selected message text
     String message;
     switch (mMessageGroup.getCheckedRadioButtonId()) {
       case R.id.purr_button:
@@ -40,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
     }
     // open the activity, showing the message
     Intent intent = new Intent(this, OutputActivity.class);
-    intent.putExtra(OutputActivity.MESSAGE, message);
+    intent.putExtra(OutputActivity.URGENT_FLAG_KEY, urgent);
+    intent.putExtra(OutputActivity.MESSAGE_TEXT_KEY, message);
     startActivity(intent);
   }
 }
