@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class OutputActivity extends AppCompatActivity {
 
   public static final String MESSAGE_TEXT_KEY = "message";
-  public static final String URGENT_FLAG_KEY = "urgent";
+  public static final String IS_URGENT_KEY = "urgent";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +21,8 @@ public class OutputActivity extends AppCompatActivity {
     // get and display the message data
     Intent intent = getIntent();
 
-    boolean urgent = intent.getBooleanExtra(URGENT_FLAG_KEY, true);
-    TextView urgentView = findViewById(R.id.urgent_flag_output);
+    boolean urgent = intent.getBooleanExtra(IS_URGENT_KEY, true);
+    TextView urgentView = findViewById(R.id.is_urgent_output);
     urgentView.setText(urgent ? R.string.urgent : R.string.not_urgent);
 
     String message = intent.getStringExtra(MESSAGE_TEXT_KEY);

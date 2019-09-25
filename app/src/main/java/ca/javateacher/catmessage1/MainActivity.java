@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
     // open the activity, showing the message
     Intent intent = new Intent(this, OutputActivity.class);
-    intent.putExtra(OutputActivity.URGENT_FLAG_KEY, urgent);
+    intent.putExtra(OutputActivity.IS_URGENT_KEY, urgent);
     intent.putExtra(OutputActivity.MESSAGE_TEXT_KEY, message);
     startActivity(intent);
   }
