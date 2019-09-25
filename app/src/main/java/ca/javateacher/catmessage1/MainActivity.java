@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     mUrgentCheckBox = findViewById(R.id.urgent_check_box);
     mMessageGroup = findViewById(R.id.message_group);
 
+    // make the button work
     Button sendButton = findViewById(R.id.send_button);
     sendButton.setOnClickListener(v -> showOutput());
   }
