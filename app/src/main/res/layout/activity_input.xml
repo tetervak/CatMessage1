@@ -6,12 +6,12 @@
     android:theme="@style/InputTheme"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".InputActivity">
 
     <TextView
-        android:id="@+id/main_activity_label"
+        android:id="@+id/input_activity_label"
         style="@style/activity_label"
-        android:text="@string/main_activity" />
+        android:text="@string/input_activity" />
 
     <Space
         android:layout_width="match_parent"

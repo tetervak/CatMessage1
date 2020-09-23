@@ -19,7 +19,7 @@
     <string name="close">Close</string>
 
     <!-- the activity labels -->
-    <string name="main_activity">Main Activity</string>
+    <string name="input_activity">Input Activity</string>
     <string name="output_activity">Output Activity</string>
 
     <!-- the floating label -->
